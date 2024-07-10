@@ -1,0 +1,29 @@
+version: 2
+
+options:
+    cli_mode: 'docker-sync'
+    compose-file-path: './docker/docker-compose.yml'
+
+syncs:
+    brosland__extractor:
+        src: '.'
+        sync_userid: 33
+        sync_excludes: [
+            '.DS_Store',
+            '.git',
+            '.idea',
+            'docker',
+            'storage',
+            'vendor'
+        ]
+        sync_strategy: 'native_osx'
+
+    brosland__extractor__storage:
+        src: './storage'
+        sync_strategy: 'native_osx'
+        sync_userid: 33
+
+    brosland__extractor__vendor:
+        src: './vendor'
+        sync_strategy: 'native_osx'
+        sync_userid: 33

@@ -1,0 +1,14 @@
+parameters:
+	email: 'john@doe.com'
+
+tracy:
+	editor: 'phpstorm://open?file=%file&line=%line'
+	editorMapping:
+		'/var/www/html': '/Users/john/Work/www/brosland/extractor'
+	email: %email%
+	fromEmail: %email%
+	showBar: true
+
+services:
+	- Brosland\Extractor\Galileo\Infrastructure\JsonPostExportProvider
+#	- Brosland\Parser\Galileo\Infrastructure\XmlPostExportProvider

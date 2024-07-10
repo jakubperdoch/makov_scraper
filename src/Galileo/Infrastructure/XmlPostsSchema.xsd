@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="posts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="post" type="post" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="post">
+		<xs:sequence>
+			<xs:element name="sourceUrl" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Source URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="title" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Post title</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="previewImage" type="file" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Preview image</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="annotation" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Annotation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="content" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>HTML content</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createdAt" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Created at</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="updatedAt" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Updated at</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="photos" type="files" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Photo gallery</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="files" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Attachments</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="files">
+		<xs:sequence>
+			<xs:element name="file" type="file" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="file">
+		<xs:sequence>
+			<xs:element name="sourceUrl" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Source URL</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="path" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Relative path to file in the local storage</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>File name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>File description</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contentType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Content type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ext" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>File extension</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="size" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>File size in bytes</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

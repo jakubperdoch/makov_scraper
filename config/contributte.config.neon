@@ -1,0 +1,4 @@
+contributte.console:
+	version: '1.0'
+	catchExceptions: true
+	autoExit: true

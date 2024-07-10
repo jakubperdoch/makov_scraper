@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+    web:
+        container_name: web
+        image: ${APP_NAME}
+        build: ./web
+        env_file:
+            - .env
+        volumes:
+            - brosland__extractor:/var/www/html
+            - brosland__extractor__storage:/var/www/html/storage
+            - brosland__extractor__vendor:/var/www/html/vendor
+            - ./web/php/custom.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+            - ./web/php/xdebug.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+        ports:
+            - "80:80"
+            - "443:443"
+        environment:
+            DEBUG_MODE: ${DEBUG_MODE}
+
+volumes:
+    brosland__extractor:
+        external: true
+
+    brosland__extractor__storage:
+        external: true
+
+    brosland__extractor__vendor:
+        external: true

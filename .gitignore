@@ -1,0 +1,14 @@
+/.docker-sync
+/.git
+/.idea
+/config/config.local.neon
+/storage/*
+!/storage/.gitkeep
+/var/*
+!/var/log
+/var/log/*
+!/var/log/.gitkeep
+!/var/.gitkeep
+/vendor
+.DS_Store
+!.gitkeep
