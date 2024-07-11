@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Brosland\Extractor\Galileo\Domain;
@@ -12,7 +13,6 @@ final readonly class FileDto
 		public string $contentType,
 		public string $ext,
 		public int $size
-	)
-	{
+	) {
 	}
 }

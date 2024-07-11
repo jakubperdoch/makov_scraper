@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Brosland\Extractor\Galileo\Domain;
@@ -21,7 +22,6 @@ final readonly class PostDto
 		public DateTimeImmutable $updatedAt,
 		public array $photos,
 		public array $attachments
-	)
-	{
+	) {
 	}
 }

@@ -4,7 +4,7 @@
 	"description": "Application for extracting data from external sources.",
 	"license": "MIT",
 	"require": {
-		"php": "^8.2 <8.3",
+		"php": ">=8",
 		"ext-dom": "*",
 		"ext-gd": "*",
 		"ext-json": "*",
@@ -14,7 +14,7 @@
 		"ext-libxml": "*",
 		"ext-zip": "*",
 		"contributte/console": "*",
-		"guzzlehttp/guzzle": "*",
+		"guzzlehttp/guzzle": "^7.8",
 		"nette/bootstrap": "*",
 		"nette/di": "*",
 		"nette/finder": "*",
@@ -25,7 +25,11 @@
 		"nette/schema": "*",
 		"nette/utils": "*",
 		"symfony/uid": "*",
-		"tracy/tracy": "*"
+		"tracy/tracy": "*",
+		"symfony/dom-crawler": "^7.1",
+		"monolog/monolog": "^3.7",
+		"symfony/css-selector": "^7.1",
+		"league/uri": "^7.4"
 	},
 	"require-dev": {
 		"deployer/deployer": "*",
