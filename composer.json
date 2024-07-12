@@ -1,51 +1,53 @@
 {
-	"name": "brosland/extractor",
-	"type": "project",
-	"description": "Application for extracting data from external sources.",
-	"license": "MIT",
-	"require": {
-		"php": ">=8",
-		"ext-dom": "*",
-		"ext-gd": "*",
-		"ext-json": "*",
-		"ext-exif": "*",
-		"ext-fileinfo": "*",
-		"ext-intl": "*",
-		"ext-libxml": "*",
-		"ext-zip": "*",
-		"contributte/console": "*",
-		"guzzlehttp/guzzle": "^7.8",
-		"nette/bootstrap": "*",
-		"nette/di": "*",
-		"nette/finder": "*",
-		"nette/http": "*",
-		"nette/neon": "*",
-		"nette/robot-loader": "*",
-		"nette/safe-stream": "*",
-		"nette/schema": "*",
-		"nette/utils": "*",
-		"symfony/uid": "*",
-		"tracy/tracy": "*",
-		"symfony/dom-crawler": "^7.1",
-		"monolog/monolog": "^3.7",
-		"symfony/css-selector": "^7.1",
-		"league/uri": "^7.4"
-	},
-	"require-dev": {
-		"deployer/deployer": "*",
-		"phpstan/phpstan": "*",
-		"phpstan/phpstan-nette": "*",
-		"timeweb/phpstan-enum": "*"
-	},
-	"config": {
-		"allow-plugins": {
-			"composer/package-versions-deprecated": true,
-			"php-http/discovery": true
-		}
-	},
-	"autoload": {
-		"psr-4": {
-			"Brosland\\Extractor\\": "src"
-		}
-	}
+ "name": "brosland/extractor",
+ "type": "project",
+ "description": "Application for extracting data from external sources.",
+ "license": "MIT",
+ "require": {
+  "php": ">=8",
+  "ext-dom": "*",
+  "ext-gd": "*",
+  "ext-json": "*",
+  "ext-exif": "*",
+  "ext-fileinfo": "*",
+  "ext-intl": "*",
+  "ext-libxml": "*",
+  "ext-zip": "*",
+  "contributte/console": "*",
+  "guzzlehttp/guzzle": "^7.8",
+  "nette/bootstrap": "*",
+  "nette/di": "*",
+  "nette/finder": "*",
+  "nette/http": "*",
+  "nette/neon": "*",
+  "nette/robot-loader": "*",
+  "nette/safe-stream": "*",
+  "nette/schema": "*",
+  "nette/utils": "*",
+  "symfony/uid": "*",
+  "tracy/tracy": "*",
+  "monolog/monolog": "^3.7",
+  "fabpot/goutte": "^4.0.3",
+  "symfony/css-selector": "^6.4",
+  "symfony/dom-crawler": "^6.4",
+  "league/uri": "^7.4",
+  "league/flysystem": "^3.28"
+ },
+ "require-dev": {
+  "deployer/deployer": "*",
+  "phpstan/phpstan": "*",
+  "phpstan/phpstan-nette": "*",
+  "timeweb/phpstan-enum": "*"
+ },
+ "config": {
+  "allow-plugins": {
+   "composer/package-versions-deprecated": true,
+   "php-http/discovery": true
+  }
+ },
+ "autoload": {
+  "psr-4": {
+   "Brosland\\Extractor\\": "src"
+  }
+ }
 }
